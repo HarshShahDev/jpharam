@@ -3,6 +3,7 @@ import "./style/App.css";
 import AppContainer from "./components/AppContainer";
 import ContactNav from "./components/ContactNav";
 import PrimaryNav from "./components/PrimaryNav";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="*" element={<AppContainer />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }
