@@ -36,7 +36,7 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <UserIcon className="h-8 w-6" />
         <ShoppingCartIcon className="h-8 w-6" />
-        <p>VIEW CART</p>
+        <p className="font-medium">VIEW CART</p>
       </div>
     </div>
   );
