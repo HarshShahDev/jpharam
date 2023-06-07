@@ -5,7 +5,7 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Header() {
+export default function PrimaryNav() {
   return (
     <div className="mx-auto max-w-6xl flex flex-row justify-between py-7">
       <div className="flex items-center gap-4">
