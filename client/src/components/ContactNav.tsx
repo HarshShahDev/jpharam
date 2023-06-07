@@ -1,30 +1,7 @@
-import {
-  EnvelopeIcon,
-  MapPinIcon,
-  GlobeAltIcon,
-} from "@heroicons/react/24/outline";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { AiOutlineTwitter } from "react-icons/ai";
+import { EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import SocialLinks from "./SocialLinks";
 
-const socialLinks = [
-  {
-    url: "#",
-    icon: GlobeAltIcon,
-  },
-  {
-    url: "#",
-    icon: FaFacebook,
-  },
-  {
-    url: "#",
-    icon: FaInstagram,
-  },
-  {
-    url: "#",
-    icon: AiOutlineTwitter,
-  },
-];
-export default function Stats() {
+export default function ContactNav() {
   return (
     <div className="p-2 border-b border-gray-200">
       <div className="mx-auto max-w-6xl flex flex-row justify-between items-center ">
@@ -45,13 +22,7 @@ export default function Stats() {
             </a>
           </li>
         </ul>
-        <div className="flex gap-3 text-light">
-          {socialLinks.map((socialLink, idx: number) => (
-            <a href={socialLink.url} key={idx}>
-              <socialLink.icon className="h-4 w-4 inline text-secondary" />
-            </a>
-          ))}
-        </div>
+        <SocialLinks />
       </div>
     </div>
   );
