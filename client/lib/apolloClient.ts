@@ -1,4 +1,10 @@
-import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from "@apollo/client";
+import {
+  ApolloClient,
+  HttpLink,
+  InMemoryCache,
+  NormalizedCacheObject,
+} from "@apollo/client";
+import { loadEnv } from "vite";
 
 let client: ApolloClient<NormalizedCacheObject>;
 
@@ -12,7 +18,7 @@ export const getApolloClient = () => {
 const _createApolloClient = () => {
   return new ApolloClient({
     link: new HttpLink({
-      uri: process.env.NEXT_PUBLIC_VENDURE_GRAPHQL,
+      uri: process.env.VITE_VENDURE_GRAPHQL,
       useGETForQueries: false,
     }),
     cache: new InMemoryCache(),

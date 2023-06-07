@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./style/App.css";
 import AppContainer from "./components/AppContainer";
 
 function App() {

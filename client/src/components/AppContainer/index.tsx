@@ -1,7 +1,6 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "../../pages/home";
 import Login from "../../pages/Login";
+import Home from "../../pages/Home";
 
 export default function AppContainer() {
   return (
