@@ -1,3 +1,11 @@
+import Header from "../components/Header";
+import Stats from "../components/Stats";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div className="h-screen">
+      <Stats />
+      <Header />
+    </div>
+  );
 }
