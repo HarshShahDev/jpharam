@@ -42,7 +42,8 @@ body {
 .btn {
   @apply inline-block text-base bg-secondary text-white font-bold text-center cursor-pointer transition-all duration-[0.3s] ease-[ease] delay-[0s] z-[1] mr-[15px] px-10 py-[17px] rounded-none;
 }
-.btn:hover{
+
+.btn:hover {
   @apply bg-primary text-white
 }
 
@@ -163,4 +164,19 @@ pre {
 ul li,
 ol li {
   @apply mt-2.5;
+}
+
+.ltn__feature-item-box-wrap-2 {
+  @apply flex justify-center shadow-none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap;
+  -webkit-box-shadow: none;
+}
+
+.ltn__feature-item-box-wrap-2 .ltn__feature-item-8 {
+  @apply min-w-[280px];
 }
