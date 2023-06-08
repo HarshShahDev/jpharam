@@ -2,6 +2,7 @@ import { startCase } from "lodash";
 
 import "../style/index.css";
 import Button from "../components/Button";
+import Heading from "../components/Heading";
 
 export default function Login() {
   const fields = [
@@ -11,16 +12,10 @@ export default function Login() {
   return (
     <>
       <section className="section-title text-center space-y-20">
-        <div>
-          <h1 className="section-title text-4xl leading-[1.2] text-primary font-sans font-rajdhani">
-            Sign In <br />
-            To Your Account
-          </h1>
-          <p className=" text-light mb-[1.5em]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-            Sit aliquid, Non distinctio vel iste.
-          </p>
-        </div>
+        <Heading
+          heading=" Sign In To Your Account"
+          subHeading="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquid, Non distinctio vel iste."
+        />
         <div className="grid grid-cols-2 gap-20">
           <div className="px-10 flex justify-center items-center">
             <form action="#">
