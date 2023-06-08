@@ -8,11 +8,11 @@ export default function Login() {
     <>
       <section className="section-title text-center space-y-20">
         <div>
-          <h1 className="section-title font-['Rajdhani', sans-serif]">
+          <h1 className="section-title text-4xl leading-[1.2] text-[#071C1F] font-sans font-rajdhani">
             Sign In <br />
             To Your Account
           </h1>
-          <p>
+          <p className=" text-[#5C727D] mb-[1.5em]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
             Sit aliquid, Non distinctio vel iste.
           </p>
@@ -20,8 +20,8 @@ export default function Login() {
         <div className="grid grid-cols-2 gap-20 max-w-6xl mx-auto">
           <div className="px-10">
             <form action="#">
-              {fields.map((field, index)=> 
-               <input key={index} className="block border-2  border-[#E4ECF2] focus:border-[#0A9A73] focus-visible:outline-0 bg-white w-full p-5 mb-4" type={field.type} name={field.name} placeholder={startCase(field.name)} />
+              {fields.map((field, index) =>
+                <input key={index} className="font-sans font-nunito-sans block border-2  border-[#E4ECF2] focus:border-[#0A9A73] focus-visible:outline-0 bg-white w-full  p-5 mb-7 py-5 pr-10 pl-5" type={field.type} name={field.name} placeholder={startCase(field.name)} />
               )}
               <div>
                 <button
@@ -34,16 +34,16 @@ export default function Login() {
               <br />
               <div>
                 <a href="#" className="btn">
-                  <small>FORGOTTEN YOUR PASSWORD?</small>
+                  <small className="text-white text-[0.875em]">FORGOTTEN YOUR PASSWORD?</small>
                 </a>
               </div>
             </form>
           </div>
 
           <div>
-            <h4>DON'T HAVE AN ACCOUNT?</h4>
+            <h4 className="text-xl text-[#071C1F] font-sans font-josefin-sans">DON'T HAVE AN ACCOUNT?</h4>
             <br />
-            <p>
+            <p className="text-[#5C727D]">
               Add items to your wishlistget personalised recommendations <br />
               check out more quickly track your orders register
             </p>
@@ -54,11 +54,12 @@ export default function Login() {
                 className="btn"
               >
                 Create Account
-              </a><br/>
+              </a><br />
             </div>
           </div>
         </div>
       </section>
+      <div className="pb-16"></div>
     </>
   );
 }
