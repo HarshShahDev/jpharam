@@ -1,3 +1,6 @@
+import { BsHouseHeart } from "react-icons/bs"
+import { FaDumbbell, FaMountain } from "react-icons/fa"
+import { TbWashGentle } from "react-icons/tb"
 export default function Banner() {
   return (
     <section className="bg-[url(/placeholder/1920x623.png)] p-20">
@@ -14,31 +17,39 @@ export default function Banner() {
           <div className="grid grid-cols-2">
             <div>
               <ul>
-                <li className="pb-3">
-                  <i className="flaticon-home-2"></i>
+                <li className="pb-3 flex items-center">
+                  <div className="bg-secondary p-3 rounded-full mr-4">
+                    <BsHouseHeart className="text-white" size={20} />
+                  </div>
                   Activated Carbon
                 </li>
-                <li className="pb-3">
-                  <i className="flaticon-mountain"></i>
+                <li className="pb-3 flex items-center">
+                  <div className="bg-secondary p-3 rounded-full mr-4">
+                    <FaMountain className="text-white" size={20} />
+                  </div>
                   Breathing Valve
                 </li>
               </ul>
             </div>
             <div>
               <ul>
-                <li className="pb-3">
-                  <i className="flaticon-heart"></i>
+                <li className="pb-3 flex items-center">
+                  <div className="bg-secondary p-3 rounded-full mr-4">
+                    <FaDumbbell className="text-white" size={20} />
+                  </div>
                   6 Layer Filteration
                 </li>
-                <li className="pb-3">
-                  <i className="flaticon-secure"></i>
+                <li className="pb-3 flex items-center">
+                  <div className="bg-secondary p-3 rounded-full mr-4">
+                    <TbWashGentle className="text-white" size={20} />
+                  </div>
                   Rewashes & Reusable
                 </li>
               </ul>
             </div>
           </div>
           <div>
-            <a href="service.html">View Products</a>
+            <a href="#">View Products</a>
           </div>
         </div>
 
