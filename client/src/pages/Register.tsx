@@ -8,12 +8,10 @@ export default function Register() {
   const fields = [{ name: "firstName", type: "text" }, { name: "lastName", type: "text" }, { name: "email", type: "text" }, { name: "password", type: "password" }, { name: "confirmPassword", type: "password" }]
 
   return (
-    <>
-      <section>
-        <h1 className="section-title">Register <br />Your Account</h1><br />
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-          Sit aliquid,  Non distinctio vel iste.</p><br /><br /><br />
-      </section>
+    <section className="mx-auto max-w-6xl flex flex-col items-center py-10">
+      <h1>Register <br />Your Account</h1><br />
+      <p>Lorem ipsum dolor, sit Amer consectetur adipisicing Elis. <br />
+        Sit languid,  Non distinctly vel piste.</p><br /><br /><br />
       <div className="w-[470px]">
         <form action="#" className="ltn__form-box contact-form-box">
           {fields.map((field, index) =>
@@ -22,23 +20,23 @@ export default function Register() {
           <br />
           <div className="flex items-start">
             <div className="flex items-center h-5">
-              <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+              <input type="checkbox" className="w-4 h-4" />
             </div>
             <div className="ml-3 text-sm">
-              <label className="font-light text-black">I consent to Herboil processing my personal data in order to send personalized marketing material in accordance with the consent form and the privacy policy.</label>
+              <label>I consent to Gerbil processing my personal data in order to send personalized marketing material in accordance with the consent form and the privacy policy.</label>
             </div>
           </div>
           <br />
           <div className="flex items-start">
             <div className="flex items-center h-5">
-              <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" />
+              <input type="checkbox" className="w-4 h-4" />
             </div>
             <div className="ml-3 text-sm">
-              <label className="font-light text-black">By clicking "create account", I consent to the privacy policy.</label>
+              <label>By clicking "create account", I consent to the privacy policy.</label>
             </div>
           </div>
           <br />
-          <div className="btn-wrapper">
+          <div className="flex justify-center">
             <button className="w-[200px] py-5 text-center rounded align-left bg-[#0A9A73] text-white hover:bg-green-dark focus:outline-none my-1" type="submit">CREATE ACCOUNT</button>
           </div>
         </form>
@@ -51,6 +49,6 @@ export default function Register() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   )
 }

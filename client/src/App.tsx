@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./style/App.css";
 import AppContainer from "./components/AppContainer";
-import Stats from "./components/Stats";
-import Header from "./components/Header";
+import ContactNav from "./components/ContactNav";
+import PrimaryNav from "./components/PrimaryNav";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Stats />
-      <Header />
+      <ContactNav />
+      <PrimaryNav />
       <BrowserRouter>
         <Routes>
           <Route path="*" element={<AppContainer />} />
