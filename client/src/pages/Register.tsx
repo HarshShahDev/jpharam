@@ -68,7 +68,7 @@ export default function Register() {
           <div className="go-to-btn mt-50">
             <a href="login.html">ALREADY HAVE AN ACCOUNT ?</a>
           </div>
-        </div>
+        </div>.
       </div>
     </section>
   );
