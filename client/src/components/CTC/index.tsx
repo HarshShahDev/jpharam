@@ -1,6 +1,6 @@
 export default function CTC() {
   return (
-    <div className="-mb-24">
+    <div className="-mb-24 mt-5">
       <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
         <div className="mx-auto max-w-5xl">
           <div className="call-to-action-inner flex justify-between items-center px-[60px] py-[50px] bg-secondary relative text-center">
