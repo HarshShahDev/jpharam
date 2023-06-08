@@ -1,4 +1,5 @@
 import { startCase } from "lodash"
+import Heading from "../components/Heading"
 /**
  * Renders a registration form with input fields for first name, last name, email, password, and confirm password.
  * 
@@ -9,9 +10,7 @@ export default function Register() {
 
   return (
     <section className="mx-auto max-w-6xl flex flex-col items-center py-10">
-      <h1>Register <br />Your Account</h1><br />
-      <p>Lorem ipsum dolor, sit Amer consectetur adipisicing Elis. <br />
-        Sit languid,  Non distinctly vel piste.</p><br /><br /><br />
+      <Heading heading="Register Your Account" subHeading="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquid, Non distinctio vel iste."/>
       <div className="w-[470px]">
         <form action="#" className="ltn__form-box contact-form-box">
           {fields.map((field, index) =>
