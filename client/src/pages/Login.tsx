@@ -1,9 +1,13 @@
 import { startCase } from "lodash";
 
 import "../style/index.css";
+import Button from "../components/Button";
 
 export default function Login() {
-  const fields = [{ name: "email", type: "email" }, { name: "password", type: "password" }]
+  const fields = [
+    { name: "email", type: "email" },
+    { name: "password", type: "password" },
+  ];
   return (
     <>
       <section className="section-title text-center space-y-20">
@@ -20,20 +24,21 @@ export default function Login() {
         <div className="grid grid-cols-2 gap-20">
           <div className="px-10">
             <form action="#">
-              {fields.map((field, index)=> 
-               <input key={index} className="block border-2  border-[#E4ECF2] focus:border-[#0A9A73] focus-visible:outline-0 bg-white w-full p-5 mb-4" type={field.type} name={field.name} placeholder={startCase(field.name)} />
-              )}
+              {fields.map((field, index) => (
+                <input
+                  key={index}
+                  className="block border-2  border-[#E4ECF2] focus:border-[#0A9A73] focus-visible:outline-0 bg-white w-full p-5 mb-4"
+                  type={field.type}
+                  name={field.name}
+                  placeholder={startCase(field.name)}
+                />
+              ))}
               <div>
-                <button
-                  type="submit"
-                  className="btn"
-                >
-                  SIGN IN
-                </button>
+                <Button type="submit">SIGN IN</Button>
               </div>
               <br />
               <div>
-                <a href="#" className="btn">
+                <a href="#" className="">
                   <small>FORGOTTEN YOUR PASSWORD?</small>
                 </a>
               </div>
@@ -49,12 +54,10 @@ export default function Login() {
             </p>
             <br />
             <div>
-              <a
-                href="/register"
-                className="btn"
-              >
+              <a href="/register" className="btn">
                 Create Account
-              </a><br/>
+              </a>
+              <br />
             </div>
           </div>
         </div>
