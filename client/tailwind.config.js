@@ -7,6 +7,7 @@ export default {
         primary: "#071c1f",
         secondary: "#0a9a73",
         light: "#657984",
+        sectionColor: "#F2F6F7",
       },
       backgroundColor: {
         background: "#f3f4f6",
