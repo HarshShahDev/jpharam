@@ -1,224 +1,93 @@
-import React from "react";
+import SocialLinks from "../SocialLinks";
+
+const navigation = [
+  {
+    name: "Company",
+    list: [
+      { name: "About", href: "#" },
+      { name: "Blog", href: "#" },
+      { name: "All Products", href: "#" },
+      { name: "Location Map", href: "#" },
+      { name: "FAQ", href: "#" },
+      { name: "Conntact Us", href: "#" },
+    ]
+  },
+  {
+    name: "Services",
+    list: [
+      { name: "Order tracking", href: "#" },
+      { name: "Wish List", href: "#" },
+      { name: "Login", href: "#" },
+      { name: "My Account", href: "#" },
+      { name: "Terms & Conditions", href: "#" },
+      { name: "Promotional Offers", href: "#" },
+    ]
+  },
+  {
+    name: "Custome Care",
+    list: [
+      { name: "Login", href: "#" },
+      { name: "My account", href: "#" },
+      { name: "Wish List", href: "#" },
+      { name: "Order tracking", href: "#" },
+      { name: "FAQ", href: "#" },
+      { name: "Contact us", href: "#" },
+    ]
+  }
+]
 
 export default function Footer() {
   return (
     <div>
-      <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="img/1.jpg--">
-        <div className="mx-auto max-w-5xl">
-          <div className="call-to-action-inner flex justify-between items-center px-[60px] py-[50px] bg-secondary relative text-center">
-            <div className="coll-to-info text-white">
-              <h1 className="text-white">
-                Buy medical disposable face mask <br /> to protect your loved ones
-              </h1>
-            </div>
-            <div className="mt-0">
-              <a className="btn btn-effect-3 btn-white" href="shop.html">
-                Explore Products <i className="icon-next"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <footer className="ltn__footer-area bg-primary text-white ">
+        <div className="grid grid-cols-2 md:grid-cols-3   lg:grid-cols-7 gap-4 p-9">
 
-      <footer className="ltn__footer-area  ">
-        <div className="footer-top-area  section-bg-2 plr--5">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-xl-3 col-md-6 col-sm-6 col-12">
-                <div className="footer-widget footer-about-widget">
-                  <div className="footer-logo">
-                    <div className="site-logo">
-                      <img src="img/logo-2.png" alt="Logo" />
-                    </div>
-                  </div>
-                  <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
-                  <div className="footer-address">
-                    <ul>
-                      <li>
-                        <div className="footer-address-icon">
-                          <i className="icon-placeholder"></i>
-                        </div>
-                        <div className="footer-address-info">
-                          <p>Brooklyn, New York, United States</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="footer-address-icon">
-                          <i className="icon-call"></i>
-                        </div>
-                        <div className="footer-address-info">
-                          <p>
-                            <a href="tel:+0123-456789">+0123-456789</a>
-                          </p>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="footer-address-icon">
-                          <i className="icon-mail"></i>
-                        </div>
-                        <div className="footer-address-info">
-                          <p>
-                            <a href="mailto:example@example.com">example@example.com</a>
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="ltn__social-media mt-20">
-                    <ul>
-                      <li>
-                        <a href="#" title="Facebook">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Twitter">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Linkedin">
-                          <i className="fab fa-linkedin"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#" title="Youtube">
-                          <i className="fab fa-youtube"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+          <div className="col-span-2">
+            <img src="/logos/logo-2.png" />
+            <p className=" text-white py-3 m-0">Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
+            <div>
+              <ul>
+                <li>
+                  <p className=" text-white">Brooklyn, New York, United States</p>
+                </li>
+                <li>
+                  <p><a className=" text-white" href="tel:+0123-456789">+0123-456789</a></p>
+                </li>
+                <li>
+                  <p><a className=" text-white" href="mailto:example@example.com">example@example.com</a></p>
+                </li>
+              </ul>
+            </div>
+            <SocialLinks color="white" />
+          </div>
+
+          {navigation.map((category: any, index: number) => (
+            <div key={index} ><h4 className="text-white">{category.name}</h4>
+              <ul className="mt-6">
+                {category.list.map((items: any, index: number) => (
+                  <li key={index} className="mb-6">
+                    <a href={items.href} className=" text-white">{items.name}</a>
+                  </li>
+                ))}
+              </ul >
+            </div>
+          ))}
+
+          <div className="col-span-2">
+            <div>
+              <h4 className=" text-white">Newsletter</h4>
+              <p className=" text-white">Subscribe to our weekly Newsletter and receive updates via email.</p>
+              <div className="pb-4">
+                <form action="#">
+                  <input type="email" name="email" placeholder="Email*" className="bg-white p-3" />
+                  <button type="submit" className="bg-secondary p-3">Submit</button>
+                </form>
               </div>
-              <div className="col-xl-2 col-md-6 col-sm-6 col-12">
-                <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Company</h4>
-                  <div className="footer-menu">
-                    <ul>
-                      <li>
-                        <a href="about.html">About</a>
-                      </li>
-                      <li>
-                        <a href="blog.html">Blog</a>
-                      </li>
-                      <li>
-                        <a href="shop.html">All Products</a>
-                      </li>
-                      <li>
-                        <a href="locations.html">Locations Map</a>
-                      </li>
-                      <li>
-                        <a href="faq.html">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="contact.html">Contact us</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-2 col-md-6 col-sm-6 col-12">
-                <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Services</h4>
-                  <div className="footer-menu">
-                    <ul>
-                      <li>
-                        <a href="order-tracking.html">Order tracking</a>
-                      </li>
-                      <li>
-                        <a href="wishlist.html">Wish List</a>
-                      </li>
-                      <li>
-                        <a href="login.html">Login</a>
-                      </li>
-                      <li>
-                        <a href="account.html">My account</a>
-                      </li>
-                      <li>
-                        <a href="about.html">Terms & Conditions</a>
-                      </li>
-                      <li>
-                        <a href="about.html">Promotional Offers</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-2 col-md-6 col-sm-6 col-12">
-                <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Customer Care</h4>
-                  <div className="footer-menu">
-                    <ul>
-                      <li>
-                        <a href="login.html">Login</a>
-                      </li>
-                      <li>
-                        <a href="account.html">My account</a>
-                      </li>
-                      <li>
-                        <a href="wishlist.html">Wish List</a>
-                      </li>
-                      <li>
-                        <a href="order-tracking.html">Order tracking</a>
-                      </li>
-                      <li>
-                        <a href="faq.html">FAQ</a>
-                      </li>
-                      <li>
-                        <a href="contact.html">Contact us</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-md-6 col-sm-12 col-12">
-                <div className="footer-widget footer-newsletter-widget">
-                  <h4 className="footer-title">Newsletter</h4>
-                  <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
-                  <div className="footer-newsletter">
-                    <form action="#">
-                      <input type="email" name="email" placeholder="Email*" />
-                      <div className="btn-wrapper">
-                        <button className="theme-btn-1 btn" type="submit">
-                          <i className="fas fa-location-arrow"></i>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                  <h5 className="mt-30">We Accept</h5>
-                  <img src="img/icons/payment-4.png" alt="Payment Image" />
-                </div>
-              </div>
+              <h5 className="text-white">We Accept</h5>
+              <img src="/payment.png" alt="Payment Image" />
             </div>
           </div>
-        </div>
-        <div className="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
-          <div className="container-fluid ltn__border-top-2">
-            <div className="row">
-              <div className="col-md-6 col-12">
-                <div className="ltn__copyright-design clearfix">
-                  <p>
-                    All Rights Reserved @ Company <span className="current-year"></span>
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-6 col-12 align-self-center">
-                <div className="ltn__copyright-menu text-end">
-                  <ul>
-                    <li>
-                      <a href="#">Terms & Conditions</a>
-                    </li>
-                    <li>
-                      <a href="#">Claim</a>
-                    </li>
-                    <li>
-                      <a href="#">Privacy & Policy</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </footer>
     </div>
