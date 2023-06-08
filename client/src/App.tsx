@@ -4,6 +4,7 @@ import AppContainer from "./components/AppContainer";
 import ContactNav from "./components/ContactNav";
 import PrimaryNav from "./components/PrimaryNav";
 import Footer from "./components/Footer";
+import CTC from "./components/CTC";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="*" element={<AppContainer />} />
         </Routes>
       </BrowserRouter>
+      <CTC />
       <Footer />
     </>
   );
