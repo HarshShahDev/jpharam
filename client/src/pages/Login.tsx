@@ -46,7 +46,7 @@ export default function Login() {
           </div>
 
           <div>
-            <h4 className="text-xl text-primary font-sans font-josefin-sans">DON'T HAVE AN ACCOUNT?</h4>
+            <h4>DON'T HAVE AN ACCOUNT?</h4>
             <br />
             <p className="text-light">
               Add items to your wishlistget personalised recommendations <br />
