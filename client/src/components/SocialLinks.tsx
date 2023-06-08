@@ -20,12 +20,12 @@ const socialData = [
     icon: AiOutlineTwitter,
   },
 ];
-export default function SocialLinks() {
+export default function SocialLinks({ color = "secondary" }) {
   return (
     <div className="flex gap-3 text-light">
       {socialData.map((socialLink, idx: number) => (
         <a href={socialLink.url} key={idx}>
-          <socialLink.icon className="h-4 w-4 inline text-secondary" />
+          <socialLink.icon className={`h-4 w-4 inline text-${color}`} />
         </a>
       ))}
     </div>
