@@ -17,7 +17,7 @@ export default function Login() {
           subHeading="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit aliquid, Non distinctio vel iste."
         />
         <div className="grid grid-cols-2 gap-20">
-          <div className="px-10 flex justify-center items-center">
+          <div className="px-10">
             <form action="#">
               {fields.map((field, index) => (
                 <input
