@@ -17,7 +17,7 @@ export default function Login() {
             Sit aliquid, Non distinctio vel iste.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-20">
+        <div className="grid grid-cols-2 gap-20 max-w-6xl mx-auto">
           <div className="px-10">
             <form action="#">
               {fields.map((field, index)=> 
