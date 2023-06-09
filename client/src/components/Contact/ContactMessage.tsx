@@ -36,7 +36,7 @@ export default function ContactMessage() {
     <>
       <section className="max-w-5xl mx-auto">
         <div className="contact-msg max-w-5xl mx-auto gap-3 mb--25 mb-10">
-          <div className=" mb--25 mb-40 relative mt-[30px] z-[1] pt-10 pb-[50px] px-[50px] shadow-[0_0_4px_rgba(0,0,0,0.1)] -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) bg-white">
+          <div className=" mb--25 mb-40 relative mt-7 z-[1] pt-10 pb-12 px-12 shadow -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) bg-white">
             <Heading heading="Get A Quote" subHeading="" />
 
             <form id="contact-form" action="#" method="post" className="grid grid-cols-2 gap-8 mb-7 mx-1 p-3">
@@ -44,7 +44,7 @@ export default function ContactMessage() {
                 <div key={index} className="relative border-2 border-[#E4ECF2] flex items-center pr-3">
                 <input
                   key={index}
-                  className="focus:border-[#0A9A73] focus-visible:outline-0 bg-white w-full p-5 py-5 pr-10 pl-5"
+                  className="focus:border-secondary focus-visible:outline-0 bg-white w-full p-5 py-5 pr-10 pl-5"
                   type={con.type}
                   name={con.type}
                   placeholder={con.placeholder}
@@ -53,7 +53,7 @@ export default function ContactMessage() {
               </div>
     
               ))}
-              <div className=" top-[30px] col-span-2">
+              <div className=" top-7 col-span-2">
                 <textarea name="message" placeholder="Enter message" className="border-2 border-[#E4ECF2] w-full p-5 mb-7 pr-10 pl-5 px-5 py-3"></textarea>
               </div>
               <p className="col-span-2">
