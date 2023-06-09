@@ -1,6 +1,7 @@
 import classNames from "classnames";
-const theme = {
+const theme: any = {
   color: {
+    base: "btn",
     white: "btn-white",
     primary: "theme-btn-1",
     secondary: "theme-btn-2",
@@ -8,9 +9,9 @@ const theme = {
 };
 export default function Button(props: any) {
   const cls = "btn";
-  const { className, children, onClick, type = "button", color = "", ...otherProps } = props;
+  const { className, children, onClick, type = "button", color = "btn", ...otherProps } = props;
   return (
-    <button type={type} className={classNames(cls, className)} onClick={onClick}>
+    <button type={type} className={classNames(cls, className, theme.color[color])} onClick={onClick}>
       {children}
     </button>
   );
