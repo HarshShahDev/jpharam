@@ -1,22 +1,18 @@
 import {
-  PhoneArrowDownLeftIcon,
   MagnifyingGlassIcon,
   ShoppingCartIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
+import Badge from "./Badge";
 
 export default function PrimaryNav() {
   return (
     <div className="mx-auto max-w-6xl flex flex-row justify-between py-7">
-      <div className="flex items-center gap-4">
+      <div className="flex items-center">
         <img src="favicon.png" alt="logo" className="w-10" />
-        <p className="font-bold text-black text-4xl">JirehPharm</p>
+        <h2 className="font-bold text-black mb-0">JirehPharm</h2>
       </div>
       <div className="flex items-center gap-4 text-light">
-        <PhoneArrowDownLeftIcon className="h-8 w-8" />
-        <div className="font-medium text-sm">
-          <p>PHONE</p> <a href="#" className="hover:text-secondary">+0123-456-789</a>
-        </div>
         <div className="min-w-[500px] rounded-full shadow-light">
           <form className="flex h-10">
             <input
@@ -35,8 +31,15 @@ export default function PrimaryNav() {
       </div>
       <div className="flex items-center gap-4">
         <UserIcon className="h-8 w-6" />
-        <ShoppingCartIcon className="h-8 w-6" />
-        <p className="font-medium">VIEW CART</p>
+        <div>
+          <span className="flex items-center cursor-pointer">
+            <ShoppingCartIcon className="h-8 w-6 relative hover:text-black" />
+            <Badge value={2} />
+          </span>
+        </div>
+        <a href="#" className="flex items-center space-x-2 text-black">
+          <h6 className="mb-0 hover:text-secondary">View Cart</h6>
+        </a>
       </div>
     </div>
   );
